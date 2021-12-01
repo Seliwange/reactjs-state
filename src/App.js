@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import Contact from './components/Contact/Contact';
-import Data from './Data.json';
+import CONTACTS_DATA from './components/Contact/Data';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
         onChange={getContact} 
       />
     {
-      Data.filter(contacts => {
+      CONTACTS_DATA.filter(contacts => {
         if (contact === "") {
           return contacts;
         } else if (contacts.lastName.toLowerCase().includes(contact.toLowerCase())) {
